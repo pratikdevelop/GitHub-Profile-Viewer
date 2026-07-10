@@ -1,75 +1,170 @@
-# React + TypeScript + Vite
+# 🚀 GitHub Profile Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive **GitHub Profile Viewer** built with **React, TypeScript, and Tailwind CSS**. This application allows users to search for any GitHub username and instantly view the user's public profile information using the GitHub REST API.
 
-Currently, two official plugins are available:
+> Developed as **React Task 1** for **The Tann Mann Foundation Learning School**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔍 Search any GitHub username
+- 👤 Display user avatar
+- 📝 View profile name and bio
+- 📚 Public repositories count
+- 👥 Followers & Following count
+- 📍 Location
+- 🏢 Company
+- 🌐 Website (if available)
+- 📅 Joined GitHub date
+- 📄 Public gists count
+- 🔗 Direct link to GitHub profile
+- ⚡ Loading indicator
+- ❌ Error handling for invalid usernames
+- ⌨️ Press **Enter** to search
+- 🧹 Clear search input
+- 📱 Fully responsive design
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React 19
+- TypeScript
+- Tailwind CSS
+- Vite
+- GitHub REST API
+- Lucide React Icons
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📂 Project Structure
 
 ```
+src/
+│── components/
+│   ├── Header.tsx
+│   ├── SearchBar.tsx
+│   ├── ProfileCard.tsx
+│
+│── services/
+│   └── githubApi.ts
+│
+│── types/
+│   └── github.ts
+│
+│── App.tsx
+│── main.tsx
+```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Clone the repository
+
+```bash
+git clone https://github.com/pratikdevelop/GitHub-Profile-Viewer.git
+```
+
+### Navigate to the project
+
+```bash
+cd GitHub-Profile-Viewer
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
+npm run dev
+```
+
+Open:
 
 ```
+http://localhost:5173
+```
+
+---
+
+## 🌐 GitHub API
+
+This project uses the GitHub Users API.
+
+```
+https://api.github.com/users/{username}
+```
+
+Example
+
+```
+https://api.github.com/users/octocat
+```
+
+---
+
+## 📷 Screenshots
+
+### Home
+
+_Add screenshot here_
+
+### Search Result
+
+_Add screenshot here_
+
+### Mobile View
+
+_Add screenshot here_
+
+---
+
+## 📈 Future Improvements
+
+- Dark Mode
+- Search History
+- Copy GitHub Profile Link
+- Repository List
+- Pagination
+- Favorite Users
+- Recent Searches
+- GitHub Contribution Graph
+
+---
+
+## 📖 Learning Objectives
+
+This project demonstrates:
+
+- React Components
+- State Management using useState
+- API Integration
+- Component Reusability
+- TypeScript Interfaces
+- Conditional Rendering
+- Error Handling
+- Loading States
+- Responsive UI Design
+
+---
+
+## 👨‍💻 Author
+
+**Pratik Raut**
+
+GitHub:
+https://github.com/pratikdevelop
+
+LinkedIn:
+https://www.linkedin.com/in/pratikraut/
+
+---
+
+## 📄 License
+
+This project is developed for learning purposes as part of **The Tann Mann Foundation Learning School React Task**.
